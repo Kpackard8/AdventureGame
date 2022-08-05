@@ -1,0 +1,36 @@
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+yes_no_list=["yes", "no"]
+
+# Introduction
+name = input("What is your name, adventurer?\n")
+print("Greetings, " + name + ". Let us go on a quest!")
+print("You find yourself in London.")
+ 
+# Start of the game
+response = ""
+while response not in yes_no_list:
+    response = input("Would you like to explore London?\nyes/no\n")
+    if response.lower() == "yes":
+        print("You see the river Thames.\n")
+    elif response.lower() == "no":
+        print("You are not ready for this quest. Goodbye, " + name + ".")
+        quit()
+    else: 
+        print("I didn't understand that.\n")
+ 
+# The second part of the game
+response = ""
+while response not in yes_no_list:
+    response = input("Would you like to cross the river?\nyes/no\n")
+    if response == "yes":
+        print("You should find a bridge, " + name + ".")
+        quit()
+    elif response == "no":
+        print("You go shopping on Oxford street .\n")
+    else:
+        print("I didn't understand that.\n")
+        
+# To be continued
